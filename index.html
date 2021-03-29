@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
-        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">        
         <title>El Corte Inglés</title>
     </head>
     <body>
@@ -23,7 +23,7 @@
                 <nav>
                     <ul class="menu">
                         <li class="menu__item">
-                            <a href="#"><span class="fas fa-camera">Agencias y cita previa</span></a>
+                            <a href="#"><span>Agencias y cita previa</span></a>
                         </li>
                         <li class="menu__item">
                             <a href="#"><span>Preguntas frecuentes</span></a>
@@ -36,23 +36,159 @@
 
                 <button class="htop__call"><span>911 22 00 44</span></button>
             </div>
+            <nav class="main-nav">
+                <button class="burguer"><span class="fas fa-bars"></span><br>Menú</button>
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="#">CARIBE</a></li>
+                    <li class="nav-list__item"><a href="#">ISLAS</a></li>
+                    <li class="nav-list__item"><a href="#">HOTEL</a></li>
+                    <li class="nav-list__item"><a href="#">CIRCUITOS</a></li>
+                    <li class="nav-list__item"><a href="#">CRUCEROS</a></li>
+                    <li class="nav-list__item"><a href="#">OFERTAS</a></li>
+                    <li class="nav-list__item"><a href="#">DISNEY</a></li>
+                    <li class="nav-list__item"><a href="#">PORTAVENTURA</a></li>
+                    <li class="nav-list__item"><a href="#">HOTELES</a></li>
+                    <li class="nav-list__item"><a href="#">VUELOS</a></li>
+                    <li class="nav-list__item"><a href="#">TRENES</a></li>
+                </ul>
+            </nav>
+
             <div class="hbottom">
                 <div class="breadcrumbs">
                     <ol class="breadcrumb__list">
                         <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Inicio</a></li>
-                        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Ofertas</a></li>                        
-                      </ol>
+                        <li class="breadcrumb__item--current">Ofertas</li>                        
+                    </ol>
                 </div>
                 <div class="filter-bar">
-                    <button class="dropdown"><span class="fas fa-camera">Zona</span></button>
-                    <button class="dropdown"><span>Duracion</span></button>
-                    <button class="dropdown"><span>Regimen alimenticio</span></button>
-                    <button class="dropdown"><span>Experiencia</span></button>
-                    <button class="dropdown"><span>Viajero</span></button>
-                    <button class="dropdown"><span>Tipo de viaje</span></button>
-                    <button class="dropdown"><span>Precios</span></button>
+                    <button class="filter-bar__dropdown"> Zona <span class="fas fa-caret-down"></span></button>                    
+                    <button class="filter-bar__dropdown">Duracion <span class="fas fa-caret-down"></span></button>
+                    <button class="filter-bar__dropdown">Regimen alimenticio <span class="fas fa-caret-down"></span></button>
+                    <button class="filter-bar__dropdown">Experiencia <span class="fas fa-caret-down"></span></button>
+                    <button class="filter-bar__dropdown">Viajero <span class="fas fa-caret-down"></span></button>
+                    <button class="filter-bar__dropdown">Tipo de viaje <span class="fas fa-caret-down"></span></button>
+                    <button class="filter-bar__dropdown">Precios <span class="fas fa-caret-down"></span></button>
                 </div>
             </div>
         </header>
+        <hr>
+        <div class="trip-pannel">
+            <article class="card">
+                <div class="card__header">
+                  <figure class="card__figure">
+                    <img src="https://www.viajeselcorteingles.es/imagen/pt/prod/paradores/img_prod_paradores_cazorla_461x184_01.jpg" alt="" class="card__image">
+                  </figure>
+                </div>
+                <div class="card__body">
+                  <h2 class="card__title">Disfruta de Paradores</h2>
+                  <h3 class="card__subtitle">
+
+                  </h3>
+                  <p class="card__copy">
+                    Reserva ya esta oferta irresistible con desayuno incluido. ¡3 noches te costarán 2!
+                  </p>
+                </div>
+                <footer class="card__footer">
+                    <h2>73 €</h2>
+                    <div class="card__actions">
+                        <button class="button">
+                        Más información <span class="fas fa-angle-right"></span>
+                        </button>
+                    </div>
+                </footer>
+              </article>    
+              
+              <article class="card">
+                <div class="card__header">
+                  <figure class="card__figure">
+                    <img src="https://www.viajeselcorteingles.es/imagen/dest/europa/espana/canarias/gran_canaria/img_dest_espana_gran_canaria_anfi_del_mar_461x184_01.jpg" alt="" class="card__image">
+                  </figure>
+                </div>
+                <div class="card__body">
+                  <h2 class="card__title">Vacaciones en Gran Canaria</h2>
+                  <h3 class="card__subtitle">                    
+                  </h3>
+                  <p class="card__copy">
+                    6 días / 5 noches. Escapa del frío con esta increíble oferta que incluye vuelo y hotel 4* en primera línea de playa.
+                  </p>
+                </div>
+                <footer class="card__footer">
+                    <h2>73 €</h2>
+                    <div class="card__actions">
+                        <button class="button"> Más información <span class="fas fa-angle-right"></span> </button>
+                    </div>
+                </footer>
+              </article> 
+              
+              <article class="card">
+                <div class="card__header">
+                  <figure class="card__figure">
+                    <img src="https://www.viajeselcorteingles.es/imagen/pt/dest/america/r_dominicana/punta_cana/img_dest_r_dominicana_punta_cana_461x184_07.jpg" alt="" class="card__image">
+                  </figure>
+                </div>
+                <div class="card__body">
+                  <h2 class="card__title">Punta Cana al mejor precio</h2>
+                  <h3 class="card__subtitle">                    
+                  </h3>
+                  <p class="card__copy">
+                    9 días / 7 noches con vuelos y traslados, en hotel 4* en todo incluido.
+                  </p>
+                </div>
+                <footer class="card__footer">
+                    <h2>73 €</h2>
+                    <div class="card__actions">
+                        <button class="button"> Más información <span class="fas fa-angle-right"></span> </button>
+                    </div>
+                </footer>
+              </article>    
+
+
+
+              <article class="card">
+                <div class="card__header">
+                  <figure class="card__figure">
+                    <img src="https://www.viajeselcorteingles.es/imagen/pt/dest/europa/espana/canarias/tenerife/adeje/img_dest_espana_tenerife_adeje_461x184.jpg" alt="" class="card__image">
+                  </figure>
+                </div>
+                <div class="card__body">
+                  <h2 class="card__title">Tenerife a tu alcance</h2>
+                  <h3 class="card__subtitle">                    
+                  </h3>
+                  <p class="card__copy">
+                    8 días / 7 noches con vuelos, traslados y alojamiento en apartamentos 3*
+                  </p>
+                </div>
+                <footer class="card__footer">
+                    <h2>73 €</h2>
+                    <div class="card__actions">
+                        <button class="button"> Más información <span class="fas fa-angle-right"></span> </button>
+                    </div>
+                </footer>
+              </article>    
+
+              
+              <article class="card">
+                <div class="card__header">
+                  <figure class="card__figure">
+                    <img src="https://www.viajeselcorteingles.es/imagen/pt/dest/africa/egipto/img_dest_egipto_luxor_461x184_06.jpg" alt="" class="card__image">
+                  </figure>
+                </div>
+                <div class="card__body">
+                  <h2 class="card__title">Egipto y crucero por el Nilo</h2>
+                  <h3 class="card__subtitle">                    
+                  </h3>
+                  <p class="card__copy">
+                    8 días / 7 noches, vuelos, traslados, excursiones, crucero por el Nilo y estancia en El Cairo en hotel 4*
+                  </p>
+                </div>
+                <footer class="card__footer">
+                    <h2>73 €</h2>
+                    <div class="card__actions">
+                        <button class="button"> Más información <span class="fas fa-angle-right"></span> </button>
+                    </div>
+                </footer>
+              </article>    
+        </div>
+
     </body>
 </html>
