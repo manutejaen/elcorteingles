@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>El Corte Inglés</title>
-</head>
-<body>
-    <header></header>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/_reset.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+        
+        <title>El Corte Inglés</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="htop">
+                <a class="htop__logo" href="#"
+                    ><img
+                        src="./img/logo_veci_h_sin_claim.png"
+                        alt="logo_corte_inglés"
+                        title="Viajes el Corte Inglés"
+                /></a>
+                <nav>
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#"><span class="fas fa-camera">Agencias y cita previa</span></a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#"><span>Preguntas frecuentes</span></a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#"><span>Identificate</span></a>
+                        </li>                        
+                    </ul>
+                </nav>
+
+                <button class="htop__call"><span>911 22 00 44</span></button>
+            </div>
+            <div class="hbottom">
+                <div class="breadcrumbs">
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Inicio</a></li>
+                        <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Ofertas</a></li>                        
+                      </ol>
+                </div>
+                <div class="filter-bar">
+                    <button class="dropdown"><span class="fas fa-camera">Zona</span></button>
+                    <button class="dropdown"><span>Duracion</span></button>
+                    <button class="dropdown"><span>Regimen alimenticio</span></button>
+                    <button class="dropdown"><span>Experiencia</span></button>
+                    <button class="dropdown"><span>Viajero</span></button>
+                    <button class="dropdown"><span>Tipo de viaje</span></button>
+                    <button class="dropdown"><span>Precios</span></button>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
