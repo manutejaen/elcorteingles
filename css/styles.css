@@ -8,7 +8,9 @@ html {
     font-family: "Asap", Arial, Tahoma, Geneva, sans-serif;
 }
 
-
+body{
+    background-color: #efefef;
+}
 
 h2 {
     margin-bottom: 10px;
@@ -205,14 +207,6 @@ p {
 }
 
 
-
-.card-background__image {        
-   
-}
-
-.card-background__image img {        
-}
-
 .card-background__content {
     display: flex;
     flex-direction: column;
@@ -221,6 +215,73 @@ p {
     align-items: flex-start;
 }
 
+
+.footer-links {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+}
+
+.footer-links__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.links-international {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-legal{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.footer-legal__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-logos {
+    width: 70%;  
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.footer-logos__card {
+    background-image: url("https://www.viajeselcorteingles.es/estaticos/Redbility/_style/_css/_gfx/img_tarjeta_veci.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+
+.footer-logos__star {
+    flex-grow: 1;
+}
+
+.footer-logos__star p::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f005";
+}
+
+.footer-logos__tripadvisor {    
+    
+}
 
 /* Resto de reglas en orden creciente */
 @media (min-width: 576px) {
