@@ -5,11 +5,20 @@ html {
     margin: 0;
     padding: 0;
     font-size: 12px;
-    font-family: "Asap", sans-serif;
+    font-family: "Asap", Arial, Tahoma, Geneva, sans-serif;
 }
 
 
 
+h2 {
+    margin-bottom: 10px;
+    font-size: 16px;    
+    font-weight: 400;
+}
+
+p {
+    margin-top:10px;
+}
 
 .header {
     max-width: 70%;
@@ -108,6 +117,10 @@ html {
     background-color: rgb(189, 255, 255);
 }
 
+.card__header {
+    margin-bottom: 10px;
+}
+
 .card__figure {
     display: flex;
     justify-content: center;    
@@ -121,6 +134,7 @@ html {
 }
 
 .card__body {
+    margin-bottom: 10px;
     background-color: cadetblue;
 }
 
@@ -130,6 +144,83 @@ html {
     align-items: center;
     background-color: blanchedalmond;
 }
+
+.deals, .conditions {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:10px;
+    width: 70%;    
+}
+
+.footer-product__list {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+.product-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-modules {    
+    margin: 0 auto;
+    width: 70%;
+    display: flex;  
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-background {  
+    min-height: 150px;
+    min-width: 150px;
+    max-width: 280px;
+    margin: 10px;    
+    display: flex;    
+    flex-direction: column;
+    flex: 1;
+    align-content: center;    
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item1 {
+    background-image: url("https://www.viajeselcorteingles.es/imagen/img_pymes.jpg");
+}
+
+.item2 {
+    background-image: url("https://www.viajeselcorteingles.es/imagen/img_footer_hoteles.png");
+}
+
+.item3 {
+    background-image: url("https://www.viajeselcorteingles.es/imagen/camp/img_camp_area_usuario_293x170.jpg");
+}
+
+
+
+.card-background__image {        
+   
+}
+
+.card-background__image img {        
+}
+
+.card-background__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: start;
+    align-items: flex-start;
+}
+
 
 /* Resto de reglas en orden creciente */
 @media (min-width: 576px) {
