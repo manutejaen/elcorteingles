@@ -22,6 +22,10 @@ p {
     margin-top:10px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     max-width: 70%;
     margin: 0 auto;
@@ -31,9 +35,20 @@ p {
 }
 
 .htop {
+    margin-bottom: 10px;
+    color: rgb(107, 107, 107);
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+
+.htop a{
+    color: rgb(107, 107, 107);
+    font-family: "Asap" ;
+    font-size:9px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .htop .htop__logo {
@@ -51,7 +66,8 @@ p {
     justify-content: space-between;
 }
 
-.menu__item {
+
+.menu__item {    
     padding-left: 14px;
     padding-right: 4px;
 }
@@ -60,13 +76,27 @@ p {
     content: "|";
 }
 
-.htop .htop__call {
+.fa-map-marker-alt, .fa-map-marker-alt a {
+    color: rgb(103, 181, 0);
+}
+
+.fa-phone a {
+    font-size: larger;
 }
 
 .main-nav {
+    margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
 }
+
+.main-nav button {
+    background-color: #67b500;
+    color: white;
+    border: none;
+}
+
 
 .nav-list {
     flex: 1; /*Toma todo el espacio que necesita en el div*/
@@ -76,27 +106,59 @@ p {
     justify-content: space-evenly;
 }
 
+.nav-list a {
+    font-family: "Asap";
+    font-size: smaller;
+    font-style: normal;
+    font-weight: normal;
+    color: rgb(58, 63, 58)
+}
+
 .hbottom {
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
 
 .hbottom .breadcrumb__list {
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: start;
 }
 
+.breadcrumb__item a {
+    color:  #67b500;        
+}
+
+.breadcrumb__item--current{
+    color: rgb(58, 63, 58);    
+}
+
 .breadcrumb__item::after {
     content: "\3E";
-    margin-left: 0.3em;
+    margin-left: 0.3em;    
 }
 
 .filter-bar {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.filter-bar .fas {
+    color: white;
+}
+
+.filter-bar button {    
+    padding: 15px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    color:white;
+    border: none;
+    background-color: #67b500;
+    font-family: "Asap";    
 }
 
 .trip-pannel {
@@ -110,13 +172,13 @@ p {
 
 .card {
     max-width: 45%;
-    min-width: 35%;
+    min-width: 280px;
     margin-right: 20px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background-color: rgb(189, 255, 255);
+    background-color: white;
 }
 
 .card__header {
@@ -136,43 +198,91 @@ p {
 }
 
 .card__body {
-    margin-bottom: 10px;
-    background-color: cadetblue;
+    padding:10px;
+    margin-bottom: 10px;    
 }
 
 .card__footer{
+    padding:10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: blanchedalmond;
+    align-items: baseline;    
 }
 
+.card__footer button {
+    border: 1.5px solid #67b500;
+    border-radius: 5%;
+    color: #67b500;
+    font-weight: 700;
+    background-color: #ffffff00;
+    text-transform: uppercase;
+    margin: 7px;
+    padding: 3px 14px;
+}
+
+.card__footer h2 {
+    color: #67b500;
+    font-size: 24px;    
+    font-weight: bolder;
+}
 .deals, .conditions {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
     padding:10px;
     width: 70%;    
+    background-color: white;
 }
+
+.arial {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: rgb(146, 146, 146); 
+}
+
+.arial-h2{
+    font-size: 14px;
+    font-weight: 900;
+    color: rgb(146, 146, 146); 
+}
+
+
 
 .footer-product__list {
     width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: blanchedalmond;
+    align-items: center;    
 }
 
 .product-item {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.144);
+    padding: 15px 25px;
+}
+
+.product-item span {
+    font-size: 18px;    
+    margin-bottom: 8px;
+    color: #67b500
+}
+
+.product-item p {
+    font-family: "Asap";
+    font-size: 9px;
+    font-weight: normal;
+    color:rgb(146, 146, 146)
 }
 
 
 .footer-modules {    
     margin: 0 auto;
+    margin-bottom: 15px;
     width: 70%;
     display: flex;  
     flex-wrap: wrap;  
@@ -185,24 +295,46 @@ p {
     min-width: 150px;
     max-width: 280px;
     margin: 10px;    
+    padding:15px 25px ;
     display: flex;    
     flex-direction: column;
     flex: 1;
-    align-content: center;    
+    justify-content: center;    
+    color: white;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.card-background button {
+    padding: 4px 15px;
+    margin-top: 15px;
+    border: 1px solid #fff;
+    background: rgba(0,0,0,0.1);
+    font-family: "Asap";
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.card-background h3 {
+    font-size: 16px;    
 }
 
 .item1 {
     background-image: url("https://www.viajeselcorteingles.es/imagen/img_pymes.jpg");
 }
 
+.item1 button{
+    color: white;
+}
+
 .item2 {
     background-image: url("https://www.viajeselcorteingles.es/imagen/img_footer_hoteles.png");
+    color:rgba(0, 0, 0);
 }
 
 .item3 {
+    color:rgba(0, 0, 0);
     background-image: url("https://www.viajeselcorteingles.es/imagen/camp/img_camp_area_usuario_293x170.jpg");
 }
 
@@ -216,12 +348,30 @@ p {
 }
 
 
+footer {
+    background-color: white;
+}
+
 .footer-links {
-    width: 70%;
     margin: 0 auto;
+    margin-bottom: 60px;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;    
     justify-content: space-between;
+}
+
+.footer-links  h3 {    
+    font-size: 16px;
+    color: #67b500;    
+}
+
+.footer-links li {
+    margin-top: 5px;
+}
+
+.footer-links a {
+    color: rgb(146, 146, 146); 
 }
 
 .footer-links__list {
@@ -236,31 +386,17 @@ p {
 }
 
 
-.footer-legal{
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;    
-}
-
-.footer-legal__social {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.social-list {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .footer-logos {
-    width: 70%;  
     margin: 0 auto;
+    margin-bottom: 50px;
+    width: 70%;    
     display: flex;
     justify-content: space-around;
 }
 
+.footer-logos span{
+    margin-right: 50px;
+}
 
 .footer-logos__card {
     background-image: url("https://www.viajeselcorteingles.es/estaticos/Redbility/_style/_css/_gfx/img_tarjeta_veci.png");
@@ -279,9 +415,33 @@ p {
     content: "\f005";
 }
 
-.footer-logos__tripadvisor {    
-    
+
+
+.footer-legal{
+    margin: 0 auto;
+    padding-bottom: 50px;    
+    width: 70%;
+    display: flex;
+    justify-content: space-between;    
 }
+
+.footer-legal__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;    
+}
+
+.social-list span {
+    color: #67b500;
+}
+
+
 
 /* Resto de reglas en orden creciente */
 @media (min-width: 576px) {
