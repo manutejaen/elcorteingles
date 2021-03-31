@@ -1,0 +1,413 @@
+$primary-colour: rgb(103, 181, 0);
+$dark-fonts: rgb(58, 63, 58);
+$grey-fonts: rgb(146, 146, 146);
+$background-color: white;
+
+$main-font: "Asap";
+$second-font: "Arial";
+
+$smallest-gap: 8px;
+$small-gap: 10px;
+$medium-gap: 16px;
+$big-gap: 20px;
+$biggest-gap: 60px;
+
+// SCSS Mixins
+
+//Px to REM
+$html-font-size: 16px;
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+$mobile_breakpoint: 576px;
+$tablet_breakpoint: 768px;
+$tablet_landscape_breakpoint: 992px;
+$desktop_breakpoint: 1200px;
+
+//Media queries
+@mixin mobile {
+    @media only screen and (max-width: #{$mobile_breakpoint}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: #{$tablet_breakpoint}) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media only screen and (max-width: #{$tablet_landscape_breakpoint}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (max-width: #{$desktop_breakpoint}) {
+        @content;
+    }
+}
+
+@mixin standard-flex(
+    $display: flex,
+    $direction: row,
+    $align: center,
+    $justify: space-between
+) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin standard-font(
+    $family: "Asap",
+    $size: rem($html-font-size),
+    $style: normal,
+    $weight: normal
+) {
+    font-family: $family;
+    font-size: rem($size);
+    font-style: $style;
+    font-weight: $weight;
+}
+
+@import url("");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,500&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: $html-font-size;
+    font-family: $main-font, $second-font, Tahoma, Geneva, sans-serif;
+}
+
+body {
+    background-color: #efefef;
+}
+
+h2 {
+    margin-bottom: $small-gap;
+    font-size: rem(16px);
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: $small-gap;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.htop {
+    margin-bottom: 10px;
+    color: $grey-fonts;
+    @include standard-flex();
+    a {
+        color: $grey-fonts;
+        font-family: $main-font;
+        font-size: rem(8px);
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    &__logo {
+        flex: 1;
+
+        img {
+            width: 180px;
+            height: 40px;
+        }
+    }
+} //
+
+.menu {
+    @include standard-flex();
+
+    .menu__item {
+        padding-left: $medium-gap;
+        padding-right: $smallest-gap;
+    }
+
+    .menu__item::after {
+        content: "|";
+    }
+
+    .fa-map-marker-alt,
+    .fa-map-marker-alt a {
+        color: $primary-colour;
+    }
+
+    .fa-phone a {
+        font-size: rem(18px);
+    }
+}
+
+.main-nav {
+    margin-bottom: $small-gap;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $background-color;
+
+    button {
+        background-color: $primary-colour;
+        color: $background-color;
+        border: none;
+    }
+
+    .nav-list {
+        flex: 1; /*Toma todo el espacio que necesita en el div*/
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+        a {
+            @include standard-font($size: 14px);
+            color: $dark-fonts;
+        }
+    }
+} // .main-nav
+
+.hbottom {
+    margin-bottom: $small-gap;
+    display: flex;
+    flex-direction: column;
+
+    .breadcrumb__list {
+        margin-bottom: $small-gap;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        .breadcrumb__item {
+            a {
+                color: $primary-colour;
+            }
+            &--current {
+                color: $dark-fonts;
+            }
+
+            &::after {
+                content: "\3E";
+                margin-left: rem(8px);
+            }
+        }
+    }
+
+    .filter-bar {
+        @include standard-flex();
+        flex-wrap: wrap;
+    }
+
+    .filter-bar .fas {
+        color: $background-color;
+    }
+
+    .filter-bar button {
+        padding: $medium-gap;
+        margin-right: $medium-gap;
+        margin-bottom: $smallest-gap;
+        color: $background-color;
+        border: none;
+        background-color: $primary-colour;
+        @include standard-font($size: 14px);
+    }
+}
+
+.trip-pannel {
+    max-width: 70%;
+    margin: 0 auto;
+    @include standard-flex();
+    flex-wrap: wrap;
+
+    .card {
+        max-width: 420px;
+        min-width: 280px;
+        margin-right: $medium-gap;
+        margin-top: $medium-gap;
+        @include standard-flex(
+            $direction: column,
+            $justify: start,
+            $align: none
+        );
+        background-color: $background-color;
+        &__header {
+            margin-bottom: $small-gap;
+        }
+        &__figure {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex: 1;
+            & img {
+                max-height: 100%;
+                min-width: 100%;
+            }
+        }
+        &__body {
+            padding: $small-gap;
+            margin-bottom: $small-gap;
+            h2 {
+                @include standard-font($weight: 900, $size: 18px);
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+        &__footer {
+            padding: $small-gap;
+            @include standard-flex($align: baseline);
+
+            button {
+                border: 1.5px solid $primary-colour;
+                border-radius: 5%;
+                color: $primary-colour;
+                font-weight: 700;
+                background-color: #ffffff00;
+                text-transform: uppercase;
+                margin: $smallest-gap;
+                padding: 3px 14px;
+            }
+
+            h2 {
+                color: $primary-colour;
+                @include standard-font($weight: bolder, $size: 24px);
+            }
+        }
+    }
+}
+
+.deals,
+.conditions {
+    margin: 0 auto;
+    margin-top: $big-gap;
+    margin-bottom: $big-gap;
+    padding: $small-gap;
+    width: 70%;
+    background-color: $background-color;
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: rem(10px);
+        font-weight: normal;
+        color: $grey-fonts;
+    }
+
+    h2 {
+        font-size: rem(14px);
+        font-weight: 900;
+        color: $grey-fonts;
+    }
+}
+
+.footer-product__list {
+    width: 70%;
+    margin: 0 auto;
+    @include standard-flex();
+    .product-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.144);
+        padding: 15px 25px;
+        span {
+            font-size: rem(18px);
+            margin-bottom: $smallest-gap;
+            color: $primary-colour;
+            p {
+                margin-top: $small-gap;
+                @include standard-font($size: 8px);
+                color: $grey-fonts;
+            }
+        }
+    }
+}
+
+.footer-modules {
+    margin: 0 auto;
+    margin-bottom: $medium-gap;
+    width: 70%;
+    @include standard-flex();
+    flex-wrap: wrap;
+}
+
+.card-background {
+    min-height: 150px;
+    min-width: 150px;
+    max-width: 280px;
+    margin: $small-gap;
+    padding: $medium-gap $big-gap;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    color: $background-color;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: start;
+        align-items: flex-start;
+        button {
+            padding: 4px 15px;            
+            border: 1px solid #fff;
+            background: rgba(0, 0, 0, 0.1);
+            font-family: "Asap";
+            font-size: 10px;
+            color: rgb(0, 0, 0);
+        }
+        h3 {
+            margin-bottom: $small-gap;
+            font-size: rem(16px);
+        }
+        p {
+          margin-bottom: $medium-gap;
+          font-size: rem(12px);
+        }
+    }
+}
+
+.item1 {
+    background-image: url("https://www.viajeselcorteingles.es/imagen/img_pymes.jpg");
+    button {
+        color: white;
+    }
+}
+
+.item2 {
+    color: rgb(0, 0, 0);
+    background-image: url("https://www.viajeselcorteingles.es/imagen/img_footer_hoteles.png");
+}
+
+.item3 {
+    color: rgb(0, 0, 0);
+    background-image: url("https://www.viajeselcorteingles.es/imagen/camp/img_camp_area_usuario_293x170.jpg");
+}
+
+

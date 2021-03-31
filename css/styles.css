@@ -1,454 +1,521 @@
+@import url("");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,500&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 body,
 html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    font-family: "Asap", Arial, Tahoma, Geneva, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Asap", "Arial", Tahoma, Geneva, sans-serif;
 }
 
-body{
-    background-color: #efefef;
+body {
+  background-color: #efefef;
 }
 
 h2 {
-    margin-bottom: 10px;
-    font-size: 16px;    
-    font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 p {
-    margin-top:10px;
+  margin-bottom: 10px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .header {
-    max-width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  max-width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .htop {
-    margin-bottom: 10px;
-    color: rgb(107, 107, 107);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+  margin-bottom: 10px;
+  color: #929292;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.htop a{
-    color: rgb(107, 107, 107);
-    font-family: "Asap" ;
-    font-size:9px;
-    font-style: normal;
-    font-weight: 400;
+.htop a {
+  color: #929292;
+  font-family: "Asap";
+  font-size: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
 }
 
-.htop .htop__logo {
-    flex: 1;
+.htop__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .htop__logo img {
-    width: 180px;
-    height: 40px;
+  width: 180px;
+  height: 40px;
 }
 
-.htop .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-
-.menu__item {    
-    padding-left: 14px;
-    padding-right: 4px;
+.menu .menu__item {
+  padding-left: 16px;
+  padding-right: 8px;
 }
 
-.menu__item::after {
-    content: "|";
+.menu .menu__item::after {
+  content: "|";
 }
 
-.fa-map-marker-alt, .fa-map-marker-alt a {
-    color: rgb(103, 181, 0);
+.menu .fa-map-marker-alt,
+.menu .fa-map-marker-alt a {
+  color: #67b500;
 }
 
-.fa-phone a {
-    font-size: larger;
+.menu .fa-phone a {
+  font-size: 1.125rem;
 }
 
 .main-nav {
-    margin-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: white;
 }
 
 .main-nav button {
-    background-color: #67b500;
-    color: white;
-    border: none;
+  background-color: #67b500;
+  color: white;
+  border: none;
 }
 
-
-.nav-list {
-    flex: 1; /*Toma todo el espacio que necesita en el div*/
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+.main-nav .nav-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /*Toma todo el espacio que necesita en el div*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.nav-list a {
-    font-family: "Asap";
-    font-size: smaller;
-    font-style: normal;
-    font-weight: normal;
-    color: rgb(58, 63, 58)
+.main-nav .nav-list a {
+  font-family: "Asap";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #3a3f3a;
 }
 
 .hbottom {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .hbottom .breadcrumb__list {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
-.breadcrumb__item a {
-    color:  #67b500;        
+.hbottom .breadcrumb__list .breadcrumb__item a {
+  color: #67b500;
 }
 
-.breadcrumb__item--current{
-    color: rgb(58, 63, 58);    
+.hbottom .breadcrumb__list .breadcrumb__item--current {
+  color: #3a3f3a;
 }
 
-.breadcrumb__item::after {
-    content: "\3E";
-    margin-left: 0.3em;    
+.hbottom .breadcrumb__list .breadcrumb__item::after {
+  content: "\3E";
+  margin-left: 0.5rem;
 }
 
-.filter-bar {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.hbottom .filter-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.filter-bar .fas {
-    color: white;
+.hbottom .filter-bar .fas {
+  color: white;
 }
 
-.filter-bar button {    
-    padding: 15px;
-    margin-right: 15px;
-    margin-bottom: 8px;
-    color:white;
-    border: none;
-    background-color: #67b500;
-    font-family: "Asap";    
+.hbottom .filter-bar button {
+  padding: 16px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  color: white;
+  border: none;
+  background-color: #67b500;
+  font-family: "Asap";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .trip-pannel {
-    max-width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.card {
-    max-width: 45%;
-    min-width: 280px;
-    margin-right: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    background-color: white;
+.trip-pannel .card {
+  max-width: 420px;
+  min-width: 280px;
+  margin-right: 16px;
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-color: white;
 }
 
-.card__header {
-    margin-bottom: 10px;
+.trip-pannel .card__header {
+  margin-bottom: 10px;
 }
 
-.card__figure {
-    display: flex;
-    justify-content: center;    
-    flex-wrap: wrap;
-    flex: 1;
+.trip-pannel .card__figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.card__figure img {
-    max-height: 100%;
-    min-width: 100%;
+.trip-pannel .card__figure img {
+  max-height: 100%;
+  min-width: 100%;
 }
 
-.card__body {
-    padding:10px;
-    margin-bottom: 10px;    
+.trip-pannel .card__body {
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.card__footer{
-    padding:10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;    
+.trip-pannel .card__body h2 {
+  font-family: "Asap";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 900;
 }
 
-.card__footer button {
-    border: 1.5px solid #67b500;
-    border-radius: 5%;
-    color: #67b500;
-    font-weight: 700;
-    background-color: #ffffff00;
-    text-transform: uppercase;
-    margin: 7px;
-    padding: 3px 14px;
+.trip-pannel .card__body p {
+  font-size: 12px;
 }
 
-.card__footer h2 {
-    color: #67b500;
-    font-size: 24px;    
-    font-weight: bolder;
-}
-.deals, .conditions {
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding:10px;
-    width: 70%;    
-    background-color: white;
-}
-
-.arial {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    font-weight: normal;
-    color: rgb(146, 146, 146); 
+.trip-pannel .card__footer {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.arial-h2{
-    font-size: 14px;
-    font-weight: 900;
-    color: rgb(146, 146, 146); 
+.trip-pannel .card__footer button {
+  border: 1.5px solid #67b500;
+  border-radius: 5%;
+  color: #67b500;
+  font-weight: 700;
+  background-color: #ffffff00;
+  text-transform: uppercase;
+  margin: 8px;
+  padding: 3px 14px;
 }
 
+.trip-pannel .card__footer h2 {
+  color: #67b500;
+  font-family: "Asap";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: bolder;
+}
 
+.deals,
+.conditions {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 70%;
+  background-color: white;
+}
+
+.deals p,
+.conditions p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.625rem;
+  font-weight: normal;
+  color: #929292;
+}
+
+.deals h2,
+.conditions h2 {
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: #929292;
+}
 
 .footer-product__list {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.product-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-right: 1px solid rgba(0, 0, 0, 0.144);
-    padding: 15px 25px;
+.footer-product__list .product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.144);
+  padding: 15px 25px;
 }
 
-.product-item span {
-    font-size: 18px;    
-    margin-bottom: 8px;
-    color: #67b500
+.footer-product__list .product-item span {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+  color: #67b500;
 }
 
-.product-item p {
-    font-family: "Asap";
-    font-size: 9px;
-    font-weight: normal;
-    color:rgb(146, 146, 146)
+.footer-product__list .product-item span p {
+  margin-top: 10px;
+  font-family: "Asap";
+  font-size: 0.5rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #929292;
 }
 
-
-.footer-modules {    
-    margin: 0 auto;
-    margin-bottom: 15px;
-    width: 70%;
-    display: flex;  
-    flex-wrap: wrap;  
-    align-items: center;
-    justify-content: space-between;
+.footer-modules {
+  margin: 0 auto;
+  margin-bottom: 16px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.card-background {  
-    min-height: 150px;
-    min-width: 150px;
-    max-width: 280px;
-    margin: 10px;    
-    padding:15px 25px ;
-    display: flex;    
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;    
-    color: white;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+.card-background {
+  min-height: 150px;
+  min-width: 150px;
+  max-width: 280px;
+  margin: 10px;
+  padding: 16px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card-background button {
-    padding: 4px 15px;
-    margin-top: 15px;
-    border: 1px solid #fff;
-    background: rgba(0,0,0,0.1);
-    font-family: "Asap";
-    font-size: 10px;
-    color: rgb(0, 0, 0);
+.card-background__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.card-background h3 {
-    font-size: 16px;    
+.card-background__content button {
+  padding: 4px 15px;
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.1);
+  font-family: "Asap";
+  font-size: 10px;
+  color: black;
+}
+
+.card-background__content h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.card-background__content p {
+  margin-bottom: 16px;
+  font-size: 0.75rem;
 }
 
 .item1 {
-    background-image: url("https://www.viajeselcorteingles.es/imagen/img_pymes.jpg");
+  background-image: url("https://www.viajeselcorteingles.es/imagen/img_pymes.jpg");
 }
 
-.item1 button{
-    color: white;
+.item1 button {
+  color: white;
 }
 
 .item2 {
-    background-image: url("https://www.viajeselcorteingles.es/imagen/img_footer_hoteles.png");
-    color:rgba(0, 0, 0);
+  color: black;
+  background-image: url("https://www.viajeselcorteingles.es/imagen/img_footer_hoteles.png");
 }
 
 .item3 {
-    color:rgba(0, 0, 0);
-    background-image: url("https://www.viajeselcorteingles.es/imagen/camp/img_camp_area_usuario_293x170.jpg");
+  color: black;
+  background-image: url("https://www.viajeselcorteingles.es/imagen/camp/img_camp_area_usuario_293x170.jpg");
 }
-
-
-.card-background__content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: start;
-    align-items: flex-start;
-}
-
-
-footer {
-    background-color: white;
-}
-
-.footer-links {
-    margin: 0 auto;
-    margin-bottom: 60px;
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;    
-    justify-content: space-between;
-}
-
-.footer-links  h3 {    
-    font-size: 16px;
-    color: #67b500;    
-}
-
-.footer-links li {
-    margin-top: 5px;
-}
-
-.footer-links a {
-    color: rgb(146, 146, 146); 
-}
-
-.footer-links__list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.links-international {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.footer-logos {
-    margin: 0 auto;
-    margin-bottom: 50px;
-    width: 70%;    
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer-logos span{
-    margin-right: 50px;
-}
-
-.footer-logos__card {
-    background-image: url("https://www.viajeselcorteingles.es/estaticos/Redbility/_style/_css/_gfx/img_tarjeta_veci.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;    
-}
-
-.footer-logos__star {
-    flex-grow: 1;
-}
-
-.footer-logos__star p::before{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f005";
-}
-
-
-
-.footer-legal{
-    margin: 0 auto;
-    padding-bottom: 50px;    
-    width: 70%;
-    display: flex;
-    justify-content: space-between;    
-}
-
-.footer-legal__social {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.social-list {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 16px;    
-}
-
-.social-list span {
-    color: #67b500;
-}
-
-
-
-/* Resto de reglas en orden creciente */
-@media (min-width: 576px) {
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-}
+/*# sourceMappingURL=styles.css.map */
