@@ -16,6 +16,9 @@ $biggest-gap: 60px;
 
 //Px to REM
 $html-font-size: 16px;
+$html-font-size-medium: 14px;
+$html-font-size-small: 12px;
+$html-font-size-smallest: 10px;
 
 @function stripUnit($value) {
     @return $value / ($value * 0 + 1);
@@ -27,7 +30,7 @@ $html-font-size: 16px;
 $mobile_breakpoint: 576px;
 $tablet_breakpoint: 768px;
 $tablet_landscape_breakpoint: 992px;
-$desktop_breakpoint: 1200px;
+$desktop_breakpoint: 1244px;
 
 //Media queries
 @mixin mobile {
@@ -68,17 +71,16 @@ $desktop_breakpoint: 1200px;
 
 @mixin standard-font(
     $family: "Asap",
-    $size: rem($html-font-size),
+    $size: $html-font-size,
     $style: normal,
     $weight: normal
 ) {
     font-family: $family;
-    font-size: rem($size);
+    font-size: $size;
     font-style: $style;
     font-weight: $weight;
 }
 
-@import url("");
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,500&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
@@ -90,7 +92,16 @@ html {
     margin: 0;
     padding: 0;
     font-size: $html-font-size;
-    font-family: $main-font, $second-font, Tahoma, Geneva, sans-serif;
+    @include desktop {
+        font-size: $html-font-size-medium;
+    }
+    @include tablet-portrait {
+        font-size: $html-font-size-small;
+    }
+    @include tablet {
+        font-size: $html-font-size-smallest;
+    }
+    font-family: $main-font, $second-font, Tahoma, Geneva, sans-serif;   
 }
 
 body {
@@ -112,11 +123,15 @@ a {
 }
 
 .header {
-    max-width: 70%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include desktop {
+        width: 85%;
+    }
+   
 }
 
 .htop {
@@ -143,10 +158,12 @@ a {
 
 .menu {
     @include standard-flex();
-
+    flex-wrap: wrap;
     .menu__item {
         padding-left: $medium-gap;
         padding-right: $smallest-gap;
+        white-space: nowrap;
+        
     }
 
     .menu__item::after {
@@ -175,6 +192,10 @@ a {
         border: none;
     }
 
+    li {
+        margin-right: $smallest-gap;
+    }
+    
     .nav-list {
         flex: 1; /*Toma todo el espacio que necesita en el div*/
         display: flex;
@@ -183,7 +204,7 @@ a {
         justify-content: space-evenly;
 
         a {
-            @include standard-font($size: 14px);
+            @include standard-font($size: rem(14px));
             color: $dark-fonts;
         }
     }
@@ -231,27 +252,39 @@ a {
         color: $background-color;
         border: none;
         background-color: $primary-colour;
-        @include standard-font($size: 14px);
+        @include standard-font($size: rem(14px));
     }
 }
 
 .trip-pannel {
-    max-width: 70%;
+    width: 70%;
     margin: 0 auto;
-    @include standard-flex();
     flex-wrap: wrap;
+    @include standard-flex();   
+    @include desktop{
+        width: 100%; 
+        flex-direction: column;                      
+    }
+    @include tablet-portrait{
+        width: 100%;   
+        flex-direction: column;                      
+    }
+    @include tablet {
+        width: 100%;       
+        flex-direction: column;                      
+    }
 
     .card {
         max-width: 420px;
-        min-width: 280px;
+        min-width: 200px;
         margin-right: $medium-gap;
         margin-top: $medium-gap;
         @include standard-flex(
             $direction: column,
             $justify: start,
             $align: none
-        );
-        background-color: $background-color;
+        );       
+        background-color: $background-color;      
         &__header {
             margin-bottom: $small-gap;
         }
@@ -269,7 +302,7 @@ a {
             padding: $small-gap;
             margin-bottom: $small-gap;
             h2 {
-                @include standard-font($weight: 900, $size: 18px);
+                @include standard-font($weight: 900, $size: rem(18px));
             }
 
             p {
@@ -293,7 +326,7 @@ a {
 
             h2 {
                 color: $primary-colour;
-                @include standard-font($weight: bolder, $size: 24px);
+                @include standard-font($weight: bolder, $size: rem(24px));
             }
         }
     }
@@ -307,6 +340,9 @@ a {
     padding: $small-gap;
     width: 70%;
     background-color: $background-color;
+    @include desktop {
+        width: 100%;
+    }
     p {
         font-family: Arial, Helvetica, sans-serif;
         font-size: rem(10px);
@@ -325,6 +361,10 @@ a {
     width: 70%;
     margin: 0 auto;
     @include standard-flex();
+    flex-wrap: wrap;
+    @include desktop {
+        width: 85%;
+    }
     .product-item {
         display: flex;
         justify-content: center;
@@ -332,13 +372,22 @@ a {
         text-align: center;
         border-right: 1px solid rgba(0, 0, 0, 0.144);
         padding: 15px 25px;
+        @include desktop{
+            padding: 10px 20px;
+        }
+        @include tablet-portrait(){
+            padding: 5px 10px;
+        }
+        @include tablet{
+            padding: 5px 10px;
+        }
         span {
             font-size: rem(18px);
             margin-bottom: $smallest-gap;
             color: $primary-colour;
             p {
                 margin-top: $small-gap;
-                @include standard-font($size: 8px);
+                @include standard-font($size: rem(8px));
                 color: $grey-fonts;
             }
         }
@@ -351,6 +400,9 @@ a {
     width: 70%;
     @include standard-flex();
     flex-wrap: wrap;
+    @include desktop {
+        width: 85%;
+    }
 }
 
 .card-background {
@@ -410,4 +462,101 @@ a {
     background-image: url("https://www.viajeselcorteingles.es/imagen/camp/img_camp_area_usuario_293x170.jpg");
 }
 
+.footer-links {
+    margin: 0 auto;
+    margin-bottom: $biggest-gap;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+    @include desktop {
+        width: 85%;
+    }
+    h3 {
+        margin-bottom: $small-gap;
+        font-size: rem(14px);
+        color: $primary-colour;    
+    }    
+    a {
+        margin-bottom: $smallest-gap;
+        font-size: rem(10px);
+        color: $grey-fonts; 
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.links-international {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+footer {
+    padding-top:$biggest-gap;
+    background-color: $background-color;    
+}
+
+
+
+.footer-logos {
+    margin: 0 auto;
+    margin-bottom: $biggest-gap;
+    width: 70%;    
+    display: flex;
+    @include desktop {
+        width: 85%;
+    }
+    justify-content: space-around;
+
+    span {
+        margin-right: $biggest-gap;
+    }
+
+    &__card{
+        background-image: url("https://www.viajeselcorteingles.es/estaticos/Redbility/_style/_css/_gfx/img_tarjeta_veci.png");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;    
+    }
+
+    &__star {
+        flex-grow: 1;
+        p::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f005";
+        }
+    }
+}
+
+
+.footer-legal{
+    margin: 0 auto;
+    padding-bottom: $biggest-gap;    
+    width: 70%;
+    display: flex;
+    justify-content: space-between;    
+    @include desktop {
+        width: 85%;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .social-list {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: rem(16px);   
+            span {
+                color: $primary-colour;
+            } 
+        }
+    }    
+}
 
