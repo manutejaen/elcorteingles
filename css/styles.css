@@ -55,6 +55,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .header {
   width: 70%;
   margin: 0 auto;
@@ -178,7 +182,6 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  /*Toma todo el espacio que necesita en el div*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,27 +277,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* width: 70%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    @include standard-flex();   
-    @include desktop{
-        width: 100%; 
-        flex-direction: column;                      
-    }
-    @include tablet-portrait{
-        width: 100%;   
-        flex-direction: column;                      
-    }
-    @include tablet {
-        width: 100%;       
-        flex-direction: column;                      
-    } */
 }
 
 .trip-pannel .card {
-  /* max-width: 420px;
-        min-width: 200px; */
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
   margin-right: 16px;

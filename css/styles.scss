@@ -124,6 +124,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .header {
     width: 70%;
     margin: 0 auto;
@@ -202,7 +206,7 @@ a {
     }
 
     .nav-list {
-        flex: 1; /*Toma todo el espacio que necesita en el div*/
+        flex: 1;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -266,26 +270,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* width: 70%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    @include standard-flex();   
-    @include desktop{
-        width: 100%; 
-        flex-direction: column;                      
-    }
-    @include tablet-portrait{
-        width: 100%;   
-        flex-direction: column;                      
-    }
-    @include tablet {
-        width: 100%;       
-        flex-direction: column;                      
-    } */
 
-    .card {
-        /* max-width: 420px;
-        min-width: 200px; */
+    .card {        
         flex-basis: 45%;
         margin-right: $medium-gap;
         margin-top: $medium-gap;
