@@ -137,6 +137,10 @@ a {
   white-space: nowrap;
 }
 
+.menu .menu__item a {
+  font-size: 1rem;
+}
+
 .menu .menu__item::after {
   content: "|";
 }
@@ -465,8 +469,15 @@ a {
 
 @media only screen and (max-width: 1244px) {
   .footer-product__list .product-item {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .footer-product__list .product-item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
@@ -673,13 +684,24 @@ footer {
   }
 }
 
+.footer-logos p {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1244px) {
+  .footer-logos p {
+    font-size: smaller;
+    white-space: normal;
+  }
+}
+
 .footer-logos span {
   margin-right: 60px;
 }
 
 .footer-logos__card {
   background-image: url("https://www.viajeselcorteingles.es/estaticos/Redbility/_style/_css/_gfx/img_tarjeta_veci.png");
-  background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
 }

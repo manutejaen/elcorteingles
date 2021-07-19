@@ -165,6 +165,9 @@ a {
         padding-left: $medium-gap;
         padding-right: $smallest-gap;
         white-space: nowrap;
+        a {
+            font-size: 1rem;
+        }
         
     }
 
@@ -179,7 +182,7 @@ a {
 
     .fa-phone a {
         font-size: rem(18px);
-    }
+    }    
 }
 
 .main-nav {
@@ -386,8 +389,11 @@ a {
         border-right: 1px solid rgba(0, 0, 0, 0.144);
         padding: 15px 25px;
         @include desktop {
-            flex-basis: 20%;
-        }      
+            flex-basis: 25%;
+        }       
+        @include mobile {
+            flex-basis: 50%;
+        }     
         span {
             flex-grow: 1;
             font-size: rem(18px);
@@ -524,15 +530,23 @@ footer {
     }
     justify-content: space-around;
 
+    p {
+        word-break: keep-all;   
+        white-space: nowrap;    
+        @include desktop {
+            font-size: smaller;    
+            white-space: normal;   
+        }     
+    }
+
     span {
-        margin-right: $biggest-gap;
+        margin-right: $biggest-gap;       
     }
 
     &__card{
-        background-image: url("https://www.viajeselcorteingles.es/estaticos/Redbility/_style/_css/_gfx/img_tarjeta_veci.png");
-        background-position: left;
+        background-image: url("https://www.viajeselcorteingles.es/estaticos/Redbility/_style/_css/_gfx/img_tarjeta_veci.png");       
         background-repeat: no-repeat;
-        background-size: contain;    
+        background-size: contain;
     }
 
     &__star {
